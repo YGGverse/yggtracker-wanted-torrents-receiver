@@ -4,8 +4,6 @@ Crontab script that allows to receive wanted torrents from multiple [YGGtracker]
 
 #### Install
 
-Latest version of toolkit could be installed with single command:
-
 `git clone https://github.com/YGGverse/yggtracker-wanted-torrents-receiver.git`
 
 #### Config
@@ -18,51 +16,38 @@ All configuration files placed at `/config` folder
 {
   "import":
   {
-    // Common rules for FTP connections
-    "ftp":
+    "ftp":                   // Common rules for FTP connections
     {
-      // How many of seconds wait for each provider response
-      "timeout":5,
-      // Which of remote folders grab to
-      // array of target directories for each provider, eg. all, sensitive/no, locale/en, etc
-      "directories":
+      "timeout":5,           // How many seconds to wait for each provider response
+      "directories":         // Remote folders to grab
       [
         "all"
       ]
     },
-    // Requirements filter before import something from providers
     "require":
     {
-      // Require approved torrents import only (according to provide.approved option in remote.json for each provider)
-      "approved":true
+      "approved":true        // Require approved torrents import only (related to provide.approved option in remote.json for each provider)
     },
-    // Local storage settings for imported content
     "storage":
     {
-      // Storage directory by default, feel free to change like `/home/qbittorrent-nox/import`
-      "directory":"storage",
-
-      // Copy all torrents imported from providers folders to the storage/_common/{hash}.torrent
-      // This mode check files MD5 hash sum to prevent duplicates in single folder from different providers
-      // Useful when bittorrent client does not support support listening of multiple folders, recursive mode
-      "common":true
+      "directory":"storage", // Storage directory by default
+      "common":true          // Copy all torrents imported from providers folders to the storage/_common/{hash}.torrent
+                             // This mode check files MD5 hash sum to prevent duplicates in single folder from different providers
+                             // Useful when bittorrent client does not support support listening of multiple folders, recursive mode
     }
   },
   "update":
   {
     "config":
     {
-      // This option allows to auto-update remote.json file on the fly without updating codebase with git clone
-      "remote":
+
+      "remote":             // This option allows to auto-update remote.json file on the fly without updating codebase with git clone
       {
-        // If disabled, local file will not be updated, but manually
-        "enabled": true,
+        "enabled": true,    // If disabled, local file will not be updated, but manually
+        "cache":86400,      // How many seconds to wait before ask repository for remote.json updates (after last file write)
 
-        // Don't worry, just this repository
-        "repository":"https://raw.githubusercontent.com/YGGverse/yggtracker-wanted-torrents-receiver/main/config/remote.json",
-
-        // How many seconds to wait before ask repository for remote.json updates (after last file write)
-        "cache":86400
+        "repository":
+        "https://raw.githubusercontent.com/YGGverse/yggtracker-wanted-torrents-receiver/main/config/remote.json"
       }
     }
   }
