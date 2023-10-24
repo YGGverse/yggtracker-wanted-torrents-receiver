@@ -6,6 +6,14 @@ Crontab script that allows to receive wanted torrents from multiple [YGGtracker]
 
 `git clone https://github.com/YGGverse/yggtracker-wanted-torrents-receiver.git`
 
+#### Usage
+
+`php src/receiver.php`
+
+or
+
+`* * * * * /usr/bin/php src/receiver.php > /dev/null 2>&1`
+
 #### Config
 
 All configuration files placed at `/config` folder
@@ -87,14 +95,6 @@ that makes registry actualization simpler for recipients and providers, as updat
 ],
 ...
 ```
-
-#### Usage
-
-`php src/receiver.php`
-
-or add to crontab:
-
-`* * * * * /usr/bin/php src/receiver.php > /dev/null 2>&1`
 
 #### Bash, python?
 
