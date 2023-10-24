@@ -1,0 +1,23 @@
+[
+    {
+        "description":
+        {
+            "name":"YGGtracker",
+            "description":"YGGtracker official node",
+            "url":"http://[201:23b4:991a:634d:8359:4521:5576:15b7]/yggtracker/"
+        },
+        "ftp":
+        {
+            "host":"201:23b4:991a:634d:8359:4521:5576:15b7",
+            "port":21,
+            "passive":true,
+            "username":"anonymous",
+            "password":"anonymous",
+            "directory":"/yggtracker/torrents/wanted"
+        },
+        "provide":
+        {
+            "approved":true
+        }
+    }
+]
