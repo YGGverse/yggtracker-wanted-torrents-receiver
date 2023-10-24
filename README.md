@@ -8,11 +8,11 @@ Crontab script that allows to receive wanted torrents from multiple [YGGtracker]
 
 #### Usage
 
-`php src/receiver.php`
+`php src/cli.php`
 
 or
 
-`* * * * * /usr/bin/php src/receiver.php > /dev/null 2>&1`
+`* * * * * /usr/bin/php src/cli.php > /dev/null 2>&1`
 
 #### Config
 
