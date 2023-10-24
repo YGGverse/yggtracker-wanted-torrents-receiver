@@ -16,7 +16,9 @@ or
 
 #### Config
 
-All configuration files placed at `/config` folder
+All configuration files placed at `/config` folder.
+
+The application works with default settings, below provided just documentation about the options for customization.
 
 ##### local.json
 
@@ -64,10 +66,10 @@ All configuration files placed at `/config` folder
 
 ##### remote.json
 
-The remote configuration contains available YGGtracker providers.
+Configuration contains available YGGtracker providers.
 
-File also could be auto-updated from this repository when owner enabled `update.config.remote.enabled` option in `local.json`
-that makes registry actualization simpler for recipients and providers, as update details without `git pull`.
+Could be auto-updated from repository when owner have enabled `update.config.remote.enabled` option in `local.json`
+that makes registry actualization simpler for recipients and providers
 
 ```
 [
