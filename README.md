@@ -18,7 +18,7 @@ or
 
 Configuration files placed at `/config` folder.
 
-Application works with default settings, below provided just documentation about the options for customization.
+Application works with default settings, below provided documentation about the options for customization.
 
 ##### local.json
 
