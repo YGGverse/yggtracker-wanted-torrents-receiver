@@ -104,7 +104,7 @@ Feel free to contribute!
 
 #### Add new YGGtracker node
 
-Just send PR to nodes.json file
+Just send PR to remote.json file
 
 #### Feedback
 
