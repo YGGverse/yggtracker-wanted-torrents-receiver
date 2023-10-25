@@ -15,7 +15,7 @@
         },
         "storage":
         {
-            "directory":"yggtracker-wanted-torrents-receiver/storage",
+            "directory":"storage",
             "common":true
         }
     },

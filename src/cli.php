@@ -20,6 +20,12 @@ $local = json_decode(
     file_get_contents(__DIR__ . '/../config/local.json')
 );
 
+// Default storage location
+if ($local->import->storage->directory == 'storage')
+{
+    $local->import->storage->directory = __DIR__ . '/../storage';
+}
+
 // Init remote config
 if ($local->update->config->remote->enabled)
 {
